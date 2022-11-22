@@ -1,10 +1,10 @@
-# Title (replace with your title)
+# Using regex to match an email
 
-Introductory paragraph (replace this with your text)
+A regular expression (regex) is a sequesnce of characters that specifies a search pattern in text. These regex patterns can be used to find all items in a text that match your pattern so you can quickly identify all emails, phone numbers, or anything of your choosing within a given text. Normal search functions look for the exact string you inputted. Regex allows you to find information without knowing what the exact string is.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+In this tutorial we are going to be reviewing the regex expression - /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ - to search for an email pattern. This will be a powerful expression that can be used to search for emails or verify if a users input matches the pattern for correct email format.
 
 ## Table of Contents
 
@@ -21,9 +21,24 @@ Briefly summarize the regex you will be describing and what you will explain. In
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
+To build a regex you first need to understand the main components of the expression. 
+When looking at our expression - /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ - there are several different parts that together can be confusing but once broken down you can easily identify the different sections and their functionality. I will be going into more detail about each component later in the tutorial. For now we are going to break it down into it's individual elements.
+
+"^" and "$" are anchors
+"\" lets special characters to be used as a sing character or "escaped"
+"[]" matches any single charectar in the range or set enclosed in the brackets
+"@" and "\." are our literals
 
 ### Anchors
+In this expression we have 2 anchors. The "^" and the "$"
 
+The "^" matches any string where the specified pattern occurs at the begining of the string. For example "^email" matches "email" and "emails" but does no match "noemail". Having this at the begining of our expression ensures that we only look for a pattern like "email@email.com" and not one like "notanemail.email@email.com"
+
+The "$" matches any string where the specified pattern occurs at the end of the string. For example "email$" matches "email" and "noemail" but does not match "emails"
+
+Using bot the anchors together will open and close the expressions pattern so if we were to use "^email$" then we will only return results that match "email"
+
+I like to think about it this way "^" is where you want to begin your pattern and "$" is where you want the pattern to end.
 ### Quantifiers
 
 ### OR Operator
