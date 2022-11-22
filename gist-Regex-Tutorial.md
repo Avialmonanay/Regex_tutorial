@@ -28,6 +28,7 @@ When looking at our expression - /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})
 "\" lets special characters to be used as a sing character or "escaped"
 "[]" matches any single charectar in the range or set enclosed in the brackets
 "@" and "\." are our literals
+"+" and "{2,6}" are our quantifiers
 
 ### Anchors
 In this expression we have 2 anchors. The "^" and the "$"
@@ -39,7 +40,14 @@ The "$" matches any string where the specified pattern occurs at the end of the 
 Using bot the anchors together will open and close the expressions pattern so if we were to use "^email$" then we will only return results that match "email"
 
 I like to think about it this way "^" is where you want to begin your pattern and "$" is where you want the pattern to end.
+
 ### Quantifiers
+Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match. In our expression we have 2 quantifiers the "+" and the {2,6} 
+
+Important Note: If the *, +, ?, {, and } characters are encountered in a regular expression pattern, the regular expression engine interprets them as quantifiers or part of quantifier constructs unless they are included in a character class. To interpret these as literal characters outside a character class, you must escape them by preceding them with a backslash. For example, the string \* in a regular expression pattern is interpreted as a literal asterisk ("*") character.
+
+Lets break down what each of our quantifiers is doing in our expression:
+The "+" 
 
 ### OR Operator
 
