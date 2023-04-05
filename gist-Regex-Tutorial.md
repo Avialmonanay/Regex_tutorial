@@ -1,6 +1,6 @@
 # Using regex to match an email
 
-A regular expression (regex) is a sequesnce of characters that specifies a search pattern in text. These regex patterns can be used to find all items in a text that match your pattern so you can quickly identify all emails, phone numbers, or anything of your choosing within a given text. Normal search functions look for the exact string you inputted. Regex allows you to find information without knowing what the exact string is.
+A regular expression (regex) is a sequence of characters that specifies a search pattern in text. These regex patterns can be used to find all items in a text that match your pattern so you can quickly identify all emails, phone numbers, or anything of your choosing within a given text. Normal search functions look for the exact string you inputted. Regex allows you to find information without knowing what the exact string is.
 
 ## Summary
 
